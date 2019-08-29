@@ -26,9 +26,11 @@
         localStorage.R10EngelliGizlerBlokListesi = getBlockedList().push(nick)
     }
     
+    /*
     const removeBlockedList = nick => {
         localStorage.R10EngelliGizlerBlokListesi = getBlockedList().filter(e => e != nick)
     }
+    */
 
     const disinfect = (_, val) => {
         for(let nick of getBlockedList()) {
@@ -37,6 +39,11 @@
             $('.avatar, .user', val).html().includes(nick) && $(val).remove()
         }
     }
+    
+    // Banlanan kişileri listeye ekle.
+    document.addEventListener('ban_user', (evt) => {
+        pushBlockedList(evt.detail)
+    })
 
     // Zamanlayıcıyı kur.
     setInterval(() => {

@@ -14,7 +14,7 @@
 /* globals $ */
 
 // Kullanıcı isminin yanına “engelle” butonu ekle.
-$('div[id^="post"] .name').each((_, val) => {
+$('div[class^="post"] .name').each((_, val) => {
     let nick = $('a:first', val).text().trim()
 
     $(val).after(`<a style="font-size: 10px" href="javascript: confirm('${nick} kullanıcısını gerçekten engellemek istiyor musunuz?') && document.dispatchEvent(new CustomEvent('ban_user', {detail: '${nick}'}));">Engelle</a>`)

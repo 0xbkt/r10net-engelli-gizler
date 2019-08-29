@@ -1,3 +1,6 @@
+## Versiyon 2:
+https://github.com/0xbkt/r10net-engelli-gizler/tree/v2
+
 ## R10.net Engelli Gizler
 
 ### Şunları gizler:

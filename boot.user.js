@@ -6,7 +6,7 @@
 // @downloadURL  https://github.com/0xbkt/r10net-engelli-gizler/raw/master/boot.user.js
 // @namespace    https://github.com/0xbkt
 // @match        *://www.r10.net/*
-// @version      0.9.1
+// @version      1.9.0
 // @author       0xbkt
 // ==/UserScript==
 
@@ -14,12 +14,20 @@
 /* globals $ */
 
 {
-    // Engel listesi.
-    // Büyük küçük harf duyarlı.
-    const BLOCKLIST = ['NiCk_1', 'nIcK_2']
+    const getBlockedList = () => {
+        return localStorage.R10EngelliGizlerBlokListesi.split(',')
+    }
+    
+    const pushBlockedList = nick => {
+        localStorage.R10EngelliGizlerBlokListesi = getBlockedList().push(nick)
+    }
+    
+    const removeBlockedList = nick => {
+        localStorage.R10EngelliGizlerBlokListesi = getBlockedList().filter(e => e != nick)
+    }
 
     const disinfect = (_, val) => {
-        for(let nick of BLOCKLIST) {
+        for(let nick of getBlockedList()) {
             $('.avatar, .user', val).html().includes(nick) && $(val).remove()
         }
     }

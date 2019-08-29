@@ -28,6 +28,8 @@
 
     const disinfect = (_, val) => {
         for(let nick of getBlockedList()) {
+            if(nick == "" || nick == null) continue
+            
             $('.avatar, .user', val).html().includes(nick) && $(val).remove()
         }
     }

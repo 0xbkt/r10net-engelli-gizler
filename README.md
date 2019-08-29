@@ -11,6 +11,13 @@
   - Firefox: https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/
 - Eklenti kurulduktan sonra aşağıdaki adresten script kurulmalı.
   - https://github.com/0xbkt/r10net-engelli-gizler/raw/master/boot.user.js
-- Tampermonkey ayarlarına giderek engelliler listesini düzenlememiz gerekiyor.
-  ![](https://s3.gifyu.com/images/Peek-2019-08-29-13-52.gif)
-- Hazır!
+- Artık her konuda kullanıcıların isminin yanında “engelle” butonu belirecek. Bu butonu kullanarak kişileri engelleyebilirsiniz.
+
+### Engel Kaldırmak
+Engel kaldırmak için herhangi bir arayüz yok. Tarayıcıda aşağıdaki yolu takip etmeniz lazım.
+
+`Sağ Tık > Öğeyi Denetle > Application (Uygulama) > Storage (Depo) > Local Storage (Yerel Depo) > R10`
+
+Burada `R10EngelliGizlerBlokListesi` değerini isteğe göre ya tamamen silebilir ya da kullanıcı adları boşluksuz olarak virgülle ayrılacak şekilde düzenleyebilirsiniz.
+
+![](https://i.snipboard.io/qVL3bK.jpg)

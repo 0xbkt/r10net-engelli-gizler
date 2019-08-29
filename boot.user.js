@@ -4,7 +4,7 @@
 // @require      https://code.jquery.com/jquery-3.4.1.slim.min.js
 // @namespace    https://github.com/0xbkt
 // @match        *://www.r10.net/*
-// @version      0.1.0
+// @version      0.9.0
 // @author       0xbkt
 // ==/UserScript==
 

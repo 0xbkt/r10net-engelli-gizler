@@ -15,6 +15,10 @@
 
 {
     const getBlockedList = () => {
+        if(typeof localStorage.R10EngelliGizlerBlokListesi == 'undefined') {
+            localStorage.R10EngelliGizlerBlokListesi = []
+        }
+        
         return localStorage.R10EngelliGizlerBlokListesi.split(',')
     }
     

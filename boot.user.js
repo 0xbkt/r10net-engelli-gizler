@@ -6,40 +6,44 @@
 // @downloadURL  https://github.com/0xbkt/r10net-engelli-gizler/raw/master/boot.user.js
 // @namespace    https://github.com/0xbkt
 // @match        *://www.r10.net/*
-// @version      1.9.0
+// @version      2.0.0
 // @author       0xbkt
 // ==/UserScript==
 
 // Suppress the linter of Tampermonkey editor.
 /* globals $ */
 
+// Kullanıcı isminin yanına “engelle” butonu ekle.
+$('div[id^="post"] .name').each((_, val) => {
+    let nick = $('a:first', val).text().trim()
+
+    $(val).after(`<a style="font-size: 10px" href="javascript: confirm('${nick} kullanıcısını gerçekten engellemek istiyor musunuz?') && document.dispatchEvent(new CustomEvent('ban_user', {detail: '${nick}'}));">Engelle</a>`)
+})
+
 {
     const getBlockedList = () => {
         if(typeof localStorage.R10EngelliGizlerBlokListesi == 'undefined') {
-            localStorage.R10EngelliGizlerBlokListesi = []
+            return []
         }
-        
+
         return localStorage.R10EngelliGizlerBlokListesi.split(',')
     }
-    
-    const pushBlockedList = nick => {
-        localStorage.R10EngelliGizlerBlokListesi = getBlockedList().push(nick)
+
+    const pushBlockedList = (nick) => {
+        let list = getBlockedList()
+        list.push(nick)
+
+        localStorage.R10EngelliGizlerBlokListesi = list
     }
-    
-    /*
-    const removeBlockedList = nick => {
-        localStorage.R10EngelliGizlerBlokListesi = getBlockedList().filter(e => e != nick)
-    }
-    */
 
     const disinfect = (_, val) => {
         for(let nick of getBlockedList()) {
             if(nick == "" || nick == null) continue
-            
+
             $('.avatar, .user', val).html().includes(nick) && $(val).remove()
         }
     }
-    
+
     // Banlanan kişileri listeye ekle.
     document.addEventListener('ban_user', (evt) => {
         pushBlockedList(evt.detail)

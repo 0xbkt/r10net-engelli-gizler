@@ -6,7 +6,7 @@
 // @downloadURL  https://github.com/0xbkt/r10net-engelli-gizler/raw/v2/boot.user.js
 // @namespace    https://github.com/0xbkt
 // @match        *://www.r10.net/*
-// @version      2.0.1
+// @version      2.0.2
 // @author       0xbkt
 // ==/UserScript==
 

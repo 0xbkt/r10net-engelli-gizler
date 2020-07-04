@@ -40,7 +40,7 @@ $('div[class^="post"] .name').each((_, val) => {
         for(let nick of getBlockedList()) {
             if(nick == "" || nick == null) continue
 
-            $('.avatar, .user', val).html().includes(nick) && $(val).remove()
+            $('.avatar, .user', val).html()?.includes(nick) && $(val).remove()
         }
     }
 

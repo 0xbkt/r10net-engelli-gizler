@@ -2,8 +2,8 @@
 // @name         R10.net Engelli Gizler
 // @description  R10'da engellediğiniz kişilerden tamamen kurtulun.
 // @require      https://code.jquery.com/jquery-3.4.1.slim.min.js
-// @updateURL    https://github.com/0xbkt/r10net-engelli-gizler/raw/master/boot.user.js
-// @downloadURL  https://github.com/0xbkt/r10net-engelli-gizler/raw/master/boot.user.js
+// @updateURL    https://github.com/0xbkt/r10net-engelli-gizler/raw/v2/boot.user.js
+// @downloadURL  https://github.com/0xbkt/r10net-engelli-gizler/raw/v2/boot.user.js
 // @namespace    https://github.com/0xbkt
 // @match        *://www.r10.net/*
 // @version      2.0.1

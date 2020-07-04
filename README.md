@@ -10,7 +10,7 @@
   - Chrome: https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo
   - Firefox: https://addons.mozilla.org/en-US/firefox/addon/tampermonkey/
 - Eklenti kurulduktan sonra aşağıdaki adresten script kurulmalı.
-  - https://github.com/0xbkt/r10net-engelli-gizler/raw/master/boot.user.js
+  - https://github.com/0xbkt/r10net-engelli-gizler/raw/v2/boot.user.js
 - Artık her konuda kullanıcıların isminin yanında “engelle” butonu belirecek. Bu butonu kullanarak kişileri engelleyebilirsiniz.
 
 ### Engel Kaldırmak
